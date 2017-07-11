@@ -33,7 +33,6 @@ check_repo() {
 		printf "[${YELLOW}NEEDS PULL${RESET}]${CHANGES} %s\n" "$REPO"
 	elif [[ $REMOTE == $BASE ]]; then
 		printf "[${YELLOW}NEEDS PUSH${RESET}]${CHANGES} %s\n" "$REPO"
-		return 1
 	else
 		printf "[${BOLD_RED}DIVERGED${RESET}]${CHANGES}   %s\n" "$REPO"
 		return 1
